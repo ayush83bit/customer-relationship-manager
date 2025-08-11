@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      # Root user password (controls the root account)
+      MYSQL_ROOT_PASSWORD: Ayush@123
+      # Pre-create this database
+      MYSQL_DATABASE: biznest
+    ports:
+      - "3307:3306"   # Host port 3307 → Container port 3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - springboot-mysql-net
+
+  springboot-app:
+    build: .
+    container_name: springboot-container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - springboot-mysql-net
+    environment:
+      # These tell Spring Boot how to connect to the MySQL container
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/biznest
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Ayush@123
+
+volumes:
+  mysql_data:
+
+networks:
+  springboot-mysql-net:
