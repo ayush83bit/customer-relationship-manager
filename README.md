@@ -53,4 +53,4 @@ Full-Stack Customer Relationship Manager with Spring Boot backend, MySQL databas
 
 ## License
 
-MIT License (or your preferred license)
+MIT License 
