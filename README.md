@@ -20,8 +20,7 @@ Full-Stack Customer Relationship Manager with Spring Boot backend, MySQL databas
 - **Frontend:** React  
 - **Backend:** Spring Boot  
 - **Database:** MySQL  
-- **Authentication:** JWT  
-- **UI Library:** (e.g., Material-UI or your choice)  
+- **Authentication:** JWT    
 
 ---
 
