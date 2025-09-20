@@ -22,5 +22,5 @@ public class User {
 
     private String password;
 
-    private String role = "USER"; // Updated to uppercase for consistency
+    private String role = "USER"; 
 }
