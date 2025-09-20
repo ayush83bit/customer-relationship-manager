@@ -1,6 +1,3 @@
-// Assuming we are keeping your existing structure and fixing only where needed
-// This includes a TicketController class to expose the POST API properly
-
 package com.ayush.crm.BizNest;
 
 import org.springframework.beans.factory.annotation.Autowired;
