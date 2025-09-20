@@ -6,5 +6,4 @@ public class TicketRequest {
     private String subject;
     private String description;
 
-    // Getters and setters
 }
