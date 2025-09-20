@@ -8,19 +8,19 @@ import java.util.List;
 @Component
 public class DataLoader implements CommandLineRunner {
 
-    private final LeadRepository leadRepository;  // ✅ Fixed name
+    private final LeadRepository leadRepository;  
     private final DepartmentRepository departmentRepository;
 
-    public DataLoader(LeadRepository leadRepository,  // ✅ Fixed constructor parameter
+    public DataLoader(LeadRepository leadRepository,  
                       DepartmentRepository departmentRepository) {
-        this.leadRepository = leadRepository;  // ✅ Fixed assignment
+        this.leadRepository = leadRepository;  
         this.departmentRepository = departmentRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
         // --- Seed Leads ---
-        if (leadRepository.count() == 0) {  // ✅ Fixed reference
+        if (leadRepository.count() == 0) {  
             List<Leads> leadsList = List.of(
                     Leads.builder()
                             .name("John Doe")
@@ -37,7 +37,7 @@ public class DataLoader implements CommandLineRunner {
                             .status("Contacted")
                             .build()
             );
-            leadRepository.saveAll(leadsList);  // ✅ Fixed reference
+            leadRepository.saveAll(leadsList);  
             System.out.println("✔️ Sample leads inserted");
         }
 
