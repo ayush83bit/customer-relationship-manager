@@ -16,7 +16,6 @@ public class Leads {
     private String status;  // new, contacted, converted
     private String company; // Added missing field
 
-    // No-arg constructor (required by JPA)
     public Leads() {}
 
     // Updated all-args constructor
@@ -31,7 +30,7 @@ public class Leads {
         this.company = company; // Added
     }
 
-    // Getters and Setters
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -50,11 +49,11 @@ public class Leads {
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
 
-    // Added getter and setter for company
+    
     public String getCompany() { return company; }
     public void setCompany(String company) { this.company = company; }
 
-    // Updated Builder class
+    
     public static class Builder {
         private Long id;
         private String name;
