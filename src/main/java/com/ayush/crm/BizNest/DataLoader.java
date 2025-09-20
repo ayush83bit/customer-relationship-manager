@@ -19,7 +19,7 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // --- Seed Leads ---
+        
         if (leadRepository.count() == 0) {  
             List<Leads> leadsList = List.of(
                     Leads.builder()
@@ -38,10 +38,10 @@ public class DataLoader implements CommandLineRunner {
                             .build()
             );
             leadRepository.saveAll(leadsList);  
-            System.out.println("✔️ Sample leads inserted");
+            System.out.println("Sample leads inserted");
         }
 
-        // --- Seed Departments ---
+        
         if (departmentRepository.count() == 0) {
             List<Department> depts = List.of(
                     new Department(null, "Sales"),
@@ -55,7 +55,7 @@ public class DataLoader implements CommandLineRunner {
                     new Department(null, "Operations")
             );
             departmentRepository.saveAll(depts);
-            System.out.println("✔️ Departments seeded");
+            System.out.println("Departments seeded");
         }
     }
 }
