@@ -18,7 +18,7 @@ public class Leads {
 
     public Leads() {}
 
-    // Updated all-args constructor
+    
     public Leads(Long id, String name, String email, String phone,
                  String source, String status, String company) {
         this.id = id;
@@ -95,7 +95,7 @@ public class Leads {
             return this;
         }
 
-        // Added company builder method
+        
         public Builder company(String company) {
             this.company = company;
             return this;
@@ -106,7 +106,7 @@ public class Leads {
         }
     }
 
-    // Static method to start the builder
+    
     public static Builder builder() {
         return new Builder();
     }
